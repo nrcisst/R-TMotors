@@ -127,6 +127,15 @@ body{
 .card h3{margin:0 0 8px; font-size:18px; color:var(--rt-navy)}
 .price{color:var(--rt-red); font-weight:700}
 
+.service-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-20px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+
 /* ---- lists & tables ---- */
 ul.clean{list-style:none; padding:0; margin:0}
 ul.clean li{padding:8px 0; border-bottom:1px dashed var(--rt-border)}
