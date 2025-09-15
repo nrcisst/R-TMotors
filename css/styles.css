@@ -1,0 +1,184 @@
+/* ========= R-T Motors Base Styles ========= */
+:root{
+  /* tune these to your exact logo shades later */
+  --rt-navy: #123b6e;      /* primary */
+  --rt-red:  #b5121b;      /* accent */
+  --rt-navy-700:#0e315b;
+  --rt-red-700:#921017;
+  --rt-text:#1f2937;       /* near-black */
+  --rt-muted:#6b7280;      /* gray-500 */
+  --rt-bg:#f7f8fb;         /* light page bg */
+  --rt-card:#ffffff;       /* card/bg */
+  --rt-border:#e5e7eb;     /* gray-200 */
+  --rt-focus:#1c64f2;      /* visible focus ring */
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,Helvetica,sans-serif;
+  color:var(--rt-text);
+  background:var(--rt-bg);
+  line-height:1.6;
+}
+
+/* ---- layout helpers ---- */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 16px;
+}
+.section{padding:48px 0}
+.grid{
+  display:grid;
+  gap:20px;
+}
+@media(min-width:768px){
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ---- header ---- */
+.topbar{
+  background:var(--rt-navy);
+  color:#fff;
+  font-size:14px;
+}
+.topbar .container{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  justify-content:space-between;
+  padding:8px 16px;
+}
+.topbar a{color:#fff;text-decoration:none}
+.topbar .cta{
+  background:var(--rt-red);
+  border-radius:999px;
+  padding:8px 14px;
+  font-weight:600;
+  display:inline-block;
+}
+.topbar .cta:hover{background:var(--rt-red-700)}
+
+/* main header */
+.header{
+  background:#fff;
+  border-bottom:1px solid var(--rt-border);
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 0;
+}
+.brand img{
+  height:56px; width:auto; display:block;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.08));
+}
+.brand h1{
+  margin:0;
+  font-size:22px;
+  color:var(--rt-navy);
+  letter-spacing:.5px;
+}
+
+/* ---- hero ---- */
+.hero{
+  background:linear-gradient(180deg,#fff, #f3f5fa);
+  padding:48px 0;
+}
+.hero h2{
+  margin:0 0 8px;
+  font-size:28px;
+  color:var(--rt-navy);
+}
+.hero p{margin:0;color:var(--rt-muted)}
+.actions{margin-top:16px; display:flex; gap:12px; flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  border:1px solid transparent;
+}
+.btn-primary{
+  background:var(--rt-red);
+  color:#fff;
+}
+.btn-primary:hover{background:var(--rt-red-700)}
+.btn-outline{
+  color:var(--rt-navy);
+  border-color:var(--rt-navy);
+  background:#fff;
+}
+.btn-outline:hover{background:var(--rt-navy); color:#fff}
+
+/* ---- cards ---- */
+.card{
+  background:var(--rt-card);
+  border:1px solid var(--rt-border);
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 2px 10px rgba(0,0,0,.04);
+}
+.card h3{margin:0 0 8px; font-size:18px; color:var(--rt-navy)}
+.price{color:var(--rt-red); font-weight:700}
+
+/* ---- lists & tables ---- */
+ul.clean{list-style:none; padding:0; margin:0}
+ul.clean li{padding:8px 0; border-bottom:1px dashed var(--rt-border)}
+ul.clean li:last-child{border-bottom:0}
+
+.table{
+  width:100%; border-collapse:collapse; background:#fff; border-radius:12px; overflow:hidden;
+  border:1px solid var(--rt-border);
+}
+.table th,.table td{padding:12px 14px; text-align:left}
+.table thead{background:#f2f4f8; color:#111827}
+.table tr + tr td{border-top:1px solid var(--rt-border)}
+
+/* ---- map ---- */
+.map-wrapper{
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid var(--rt-border);
+  box-shadow:0 1px 8px rgba(0,0,0,.04);
+}
+.map{width:100%; height:320px; border:0}
+
+/* ---- footer ---- */
+footer{
+  background:var(--rt-navy-700);
+  color:#cfd8e3;
+  padding:28px 0;
+  margin-top:40px;
+  font-size:14px;
+}
+footer a{color:#fff; text-decoration:none}
+
+/* ---- forms ---- */
+label{display:block; font-weight:600; margin:12px 0 6px}
+input, textarea{
+  width:100%;
+  padding:12px 12px;
+  border:1px solid var(--rt-border);
+  border-radius:10px;
+  font:inherit;
+  background:#fff;
+}
+input:focus, textarea:focus{
+  outline:3px solid rgba(28,100,242,.25);
+  border-color:var(--rt-focus);
+}
+
+/* ---- accessibility helpers ---- */
+a:focus, button:focus, .btn:focus{
+  outline:3px solid rgba(28,100,242,.35);
+  outline-offset:2px;
+}
+.visually-hidden{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); border:0;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact R-T Motors</title>
+  <meta name="description" content="Contact R-T Motors in Houston for quotes and appointments. Call (713) 772-4505 or send a message." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Top contact strip -->
+  <div class="topbar">
+    <div class="container">
+      <div>Hours: Mon–Fri 9–6 · Sat 9–2 · Closed Sun & Federal Holidays</div>
+      <a class="cta" href="tel:7137724505">Call (713) 772-4505</a>
+    </div>
+  </div>
+
+  <!-- Header with logo -->
+  <header class="header">
+    <div class="container brand">
+      <a href="index.html" style="display:flex;align-items:center;gap:14px;text-decoration:none">
+        <img src="images/RTLogo.png" alt="R-T Motors — Auto Sales & Repair" />
+        <h1>R-T Motors</h1>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container grid grid-2">
+        <!-- Contact info -->
+        <div class="card">
+          <h2>Contact Us</h2>
+          <p><strong>Phone (preferred):</strong> <a href="tel:7137724505">(713) 772-4505</a></p>
+          <p><strong>Address:</strong><br/>
+            9651 Bissonnet St, Ste 202<br/>
+            Houston, TX 77036<br/>
+            United States
+          </p>
+          <p><strong>Hours:</strong> Mon–Fri 9–6 · Sat 9–2 · Closed Sun & Federal Holidays</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:7137724505">Call Now</a>
+            <a class="btn btn-outline" href="index.html">Back to Home</a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="card">
+          <h2>Request a Quote</h2>
+          <!-- Replace action with your Formspree endpoint or Netlify Forms setup -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+
+            <label for="service">Service Needed</label>
+            <textarea id="service" name="service" rows="4" placeholder="Example: 2015 Camry — brake squeal when stopping." required></textarea>
+
+            <div class="actions" style="margin-top:12px">
+              <button class="btn btn-primary" type="submit">Send</button>
+              <a class="btn btn-outline" href="tel:7137724505">Prefer to Call?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="section">
+      <div class="container">
+        <h3>Find Us</h3>
+        <div class="map-wrapper">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps?q=9651+Bissonnet+St,+Ste+202,+Houston,+TX+77036&output=embed"
+            allowfullscreen
+            loading="lazy"
+            title="Map to R-T Motors">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 R-T Motors • 9651 Bissonnet St, Ste 202, Houston, TX 77036 • <a href="tel:7137724505">(713) 772-4505</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
